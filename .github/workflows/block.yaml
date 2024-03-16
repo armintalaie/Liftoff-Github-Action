@@ -1,0 +1,20 @@
+name: Block Users on Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+
+  block-users:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Block Users
+      uses: peter-evans/block-users@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        users: ${{ github.event.pull_request.user.login }}
+        blocked-comment: >
+          :no_entry: Sorry @${{ github.event.pull_request.user.login }},
+          we do not accept contributions from your account.
+          Please open an issue if you have any questions or concerns.
