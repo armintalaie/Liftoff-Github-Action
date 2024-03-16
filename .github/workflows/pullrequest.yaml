@@ -1,9 +1,11 @@
 name: Baguette CI2
 
 on:
-    pull_request:
+    push:
         branches:
             - main
+    discussion:
+        types: [created]
     workflow_dispatch:
     
 jobs:
