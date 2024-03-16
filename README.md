@@ -1,4 +1,4 @@
-# Github Actions Workshop
+# Github Actions Workshop: Sat March 16
 
 This is a workshop to learn how to use Github Actions. Github Actions is a CI/CD tool that allows you to automate your workflow. It's a convenient way to build, test, and deploy your code.
 
