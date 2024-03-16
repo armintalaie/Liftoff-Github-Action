@@ -27,6 +27,3 @@ jobs:
             This repository is in READ ONLY mode. If you're trying to test the workflows, you need to create a fork of this repository to your organisation or personal account before you can run the workflows!
             
             If you've spotted a mistake that you'd like to see fixed, please create an issue instead. This PR will be closed shortly.
-
-      - uses: superbrothers/close-pull-request@v3
-        if: ${{ github.event_name == 'pull_request_target' }}
